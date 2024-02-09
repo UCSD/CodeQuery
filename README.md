@@ -26,15 +26,19 @@ python3 codequery.py 'your_query_here' [optional_path1 optional_path2 ...]
 
 ## Requirements
 
-- Python 3.x
-- Dependencies from `requirements.txt`
+1. Python 3.x
+2. Installed dependencies from `requirements.txt`
 
 ```bash
 pip3 install -r requirements.txt
 ```
-
-- Code Context
-  To make the `codequery.py` script work, you need to install the [Code Context](https://github.com/UCSD/CodeContext) CLI tool and make sure it's in your system's PATH. This tool gathers the needed information from chosen directories or files, which the AI models then analyze.
+3. OpenAI API key
+  - You must create an `.env` file at the root of the project with the `OPENAI_API_KEY` variable set to your OpenAI API key like so:
+```
+OPENAI_API_KEY=your_openai_api_key_here
+```
+4. Code Context CLI tool
+  - To make the `codequery.py` script work, you need to install the [Code Context](https://github.com/UCSD/CodeContext) CLI tool and make sure it's in your system's PATH. This tool gathers the needed information from chosen directories or files, which the AI models then analyze.
 
   Follow the installation guide provided with the `Code Context` tool. Ensure it's correctly installed and can be called from your terminal or command prompt.
 
